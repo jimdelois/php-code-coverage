@@ -44,7 +44,8 @@ class PHP_CodeCoverage_Driver_Xdebug implements PHP_CodeCoverage_Driver
      */
     public function start()
     {
-        xdebug_start_code_coverage(XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE);
+        // TODO: Will hook up XDEBUG_CC_BRANCH_CHECK to a configuration option and also do an existence check...
+        xdebug_start_code_coverage(XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE | XDEBUG_CC_BRANCH_CHECK );
     }
 
     /**
